@@ -2,10 +2,12 @@
 
 /**
  * Takes a F number and returns the number to C
- * @param {string} fahren temperature in degrees F
+ * @param {number} fahren temperature in degrees F
  * @returns {number} the number of degrees C
  */
-function convertToCelsius(fahren) {}
+function convertToCelsius(fahren) {
+  return (fahren - 32) * (5/9)
+}
 
 /**
  * Takes both numbers (F, C) and display a message with
@@ -19,17 +21,26 @@ function convertToCelsius(fahren) {}
  *   < 86   |  "warm"
  *   < 100  |  "hot"
  *
- * @param {number} fahren
+ * @param {string} fahren
  * @param {number} celc
  */
-function createMessage(fahren, celc) {}
+function createMessage(fahren, celc) {
+       if(fahren<32){console.log("very cold")}
+  else if(fahren<64){console.log("cold")}
+  else if(fahren<86){console.log("warm")}
+  else if(fahren<100){console.log("hot")}
+  else if(fahren>100){console.log("very hot")}
+
+}
 
 /**
  * Takes a number and returns a random integer from 0 to the limit
  * @param {number} limit
  * @returns {number} a number between 0 and the int passed in
  */
-function rand(limit) {}
+function rand(limit) {
+  return Math.floor(Math.random() * limit)
+}
 
 // -------------------- DONT NOT CHANGE THE CODE BELOW ---------------------- //
 
